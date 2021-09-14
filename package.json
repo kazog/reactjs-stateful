@@ -1,8 +1,8 @@
 {
   "name": "reactjs-state",
-  "version": "0.0.04",
+  "version": "0.0.05",
   "description": "基于React Hooks开发一套状态管理组件",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {},
   "keywords": [
     "react",
