@@ -3,7 +3,7 @@
  * Desc:
  */
 import {useState, useEffect} from 'react';
-import {StateSource} from './StateSource';
+import {StateSource} from '../lib/StateSource';
 
 export interface ViewData<T> {
   data: T;

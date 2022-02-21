@@ -4,7 +4,7 @@
  */
 
 import React, {PureComponent} from 'react';
-import {State} from './State';
+import {State} from '../lib/State';
 
 interface Props {
   state: State;
