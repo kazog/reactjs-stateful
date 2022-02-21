@@ -4,7 +4,6 @@
  */
 
 import React, {PureComponent} from 'react';
-import {View} from 'react-native';
 import {State} from './State';
 
 interface Props {
@@ -33,7 +32,7 @@ export class StateComponent<P = Props, S = {}, SS = any> extends PureComponent<P
     if (this.props.children) {
       return this.props.children();
     }
-    return <View />;
+    return <></>;
   }
 
   // 界面加载渲染完成调用

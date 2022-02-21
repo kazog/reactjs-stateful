@@ -45,6 +45,5 @@ export function StateWidget(props: Readonly<Props<T>>) {
   }, [props.source]);
 
   // 捕获页面代码异常
-  let child = null;
   return props.child(result);
 }
