@@ -1,6 +1,6 @@
 {
   "name": "reactjs-state",
-  "version": "0.0.05",
+  "version": "0.0.10",
   "description": "基于React Hooks开发一套状态管理组件",
   "main": "index.js",
   "scripts": {},
@@ -11,15 +11,17 @@
   ],
   "author": {
     "name": "Meng",
-    "email": "umxkz@qq.com"
+    "email": "umxkz@qq.com",
+    "description": "description",
+    "url": "https://github.com/kzanm/reactjs-state.git"
   },
-  "homepage": "https://github.com/umkz/reactjs-state",
+  "homepage": "https://github.com/kzanm/reactjs-state",
   "bugs": {
-    "url": "https://github.com/umkz/reactjs-state/issues"
+    "url": "https://github.com/kzanm/reactjs-state/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umkz/reactjs-state.git"
+    "url": "https://github.com/kzanm/reactjs-state.git"
   },
   "license": "ISC"
 }
