@@ -15,4 +15,4 @@ interface Props2<T> {
   child: (data: ViewData<T>) => React.ReactElement;
 }
 
-export type StateWidget<T> = (props: Readonly<Props2<T>>) => React.ReactElement;
+export class StateWidget<T> = (props: Readonly<Props2<T>>) => React.ReactElement;
