@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-state",
+  "name": "react-stateful",
   "version": "0.0.01",
   "description": "基于React Hooks开发一套状态管理组件",
   "main": "index.js",
@@ -12,16 +12,16 @@
   "author": {
     "name": "Meng",
     "email": "umxkz@qq.com",
-    "description": "description",
-    "url": "https://github.com/kzanm/reactjs-state.git"
+    "description": "基于React Hooks开发一套状态管理组件",
+    "url": "https://github.com/kzanm/react-stateful.git"
   },
-  "homepage": "https://github.com/kzanm/reactjs-state",
+  "homepage": "https://github.com/kzanm/react-stateful",
   "bugs": {
-    "url": "https://github.com/kzanm/reactjs-state/issues"
+    "url": "https://github.com/kzanm/react-stateful/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kzanm/reactjs-state.git"
+    "url": "https://github.com/kzanm/react-stateful.git"
   },
   "license": "ISC"
 }

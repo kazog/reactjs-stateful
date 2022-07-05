@@ -3,8 +3,8 @@
  * Desc:
  */
 
-import React, {PureComponent} from 'react';
-import {State} from '../lib/State';
+import React, { PureComponent } from "react";
+import { State } from "../lib/State";
 
 interface Props {
   state: State;
@@ -31,7 +31,7 @@ export class StateComponent<P = Props, S = {}, SS = any> extends PureComponent<P
   render() {
     const children = this.props.children;
     if (children) {
-      return typeof children == 'function' ? children() : children;
+      return typeof children == "function" ? children() : children;
     }
     return null;
   }

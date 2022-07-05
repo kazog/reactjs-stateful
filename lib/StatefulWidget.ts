@@ -15,4 +15,4 @@ type Props2<T> = {
   child: (data: ViewData<T>) => React.ReactElement;
 }
 
-export type StateWidget<T> = (props: Props2<T>) => React.ReactElement;
+export type StatefulWidget<T> = (props: Props2<T>) => React.ReactElement;

@@ -15,7 +15,7 @@ interface Props<T> {
   child: (data: ViewData<T>) => React.ReactElement;
 }
 
-export function StateWidget(props: Readonly<Props<T>>) {
+export function StatefulWidget(props: Readonly<Props<T>>) {
   const value = props.source.data;
   // 设置默认植
   const [result, setResult] = useState({
@@ -31,7 +31,7 @@ export function StateWidget(props: Readonly<Props<T>>) {
         });
       },
       (data: any, err: Error) => {
-        console.error('StateWidget Error ======>', err);
+        console.error('StatefulWidget Error ======>', err);
         setResult({
           data: data,
           has: false,
