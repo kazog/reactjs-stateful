@@ -29,7 +29,7 @@ export class StateComponent<P = Props, S = {}, SS = any> extends PureComponent<P
 
   // 可以加一个默认空视图的提示
   render() {
-    const children = this.props?.children;
+    const children = this.props.children;
     if (children) {
       return typeof children == "function" ? children() : children;
     }

@@ -2,7 +2,7 @@
  * Create By: Meng
  * Desc:
  */
-export class StateSource<T> {
+export class StateStore<T> {
   public data?: T;
   private _func?: (data: any) => void | undefined;
   private _error?: (data: any, error: Error) => void | undefined;
@@ -79,7 +79,7 @@ export class StateSource<T> {
   public subscribe(
     func: (data: any) => void,
     error: (data: any, error: any) => void
-  ): StateSource<T> {
+  ): StateStore<T> {
     this._func = func;
     this._error = error;
     return this;

@@ -3,7 +3,7 @@
  * Desc:
  */
 import React, { useState, useEffect } from "react";
-import { StateSource } from "../lib/StateSource";
+import { StateStore } from "./StateStore";
 
 export interface ViewData<T> {
   data: T;
@@ -11,19 +11,19 @@ export interface ViewData<T> {
 }
 
 interface Props<T> {
-  source: StateSource<T>;
+  store: StateStore<T>;
   child: (data: ViewData<T>) => React.ReactElement;
 }
 
 export function StatefulWidget(props: Readonly<Props<any>>) {
-  const value = props.source.data;
+  const value = props.store.data;
   // 设置默认植
   const [result, setResult] = useState({
     data: value,
     has: value != null,
   });
   useEffect(() => {
-    const subscribe: StateSource<any> = props.source.subscribe(
+    const subscribe: StateStore<any> = props.store.subscribe(
       (data: any) => {
         setResult({
           data,
@@ -42,7 +42,7 @@ export function StatefulWidget(props: Readonly<Props<any>>) {
     return () => {
       subscribe.unsubscribe();
     };
-  }, [props.source]);
+  }, [props.store]);
 
   // 捕获页面代码异常
   return props.child(result);

@@ -2,17 +2,18 @@
  * Create By: Meng
  * Desc:
  */
-import React from "react";
-import { StateSource } from "./StateSource";
-
-export type ViewData<T> = {
-  data: T;
-  has: boolean;
-};
-
-type Props2<T> = {
-  source: StateSource<T>;
-  child: (data: ViewData<T>) => React.ReactElement;
-};
-
-export type StatefulWidget<T> = (props: Props2<T>) => React.ReactElement;
+ import React from "react";
+ import { StateStore } from "./StateStore";
+ 
+ export type ViewData<T> = {
+   data: T;
+   has: boolean;
+ };
+ 
+ type Props<T> = {
+   store: StateStore<T>;
+   child: (data: ViewData<T>) => React.ReactElement;
+ };
+ 
+ export function StatefulWidget(props: Readonly<Props<any>>): React.ReactElement;
+ 
