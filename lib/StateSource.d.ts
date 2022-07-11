@@ -26,7 +26,7 @@
   public clone2(origin: any): void;
 
   // 订阅
-  public subscribe(func: (data: any) => void, error: (data: any, error: any) => void): void;
+  public subscribe(func: (data: any) => void, error: (data: any, error: any) => void): StateSource<T>;
 
   // 解绑
   public unsubscribe(): void;

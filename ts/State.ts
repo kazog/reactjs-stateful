@@ -3,8 +3,8 @@
  * Desc:
  */
 export interface State {
-  onCreate?: () => void;
-  onShow?: () => void;
-  onUpdate?: () => void;
-  onDestroy?: () => void;
+  onCreate?: void;
+  onShow?: void;
+  onUpdate?: void;
+  onDestroy?: void;
 }

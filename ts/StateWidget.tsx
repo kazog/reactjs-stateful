@@ -2,7 +2,7 @@
  * Create By: Meng
  * Desc:
  */
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {StateSource} from '../lib/StateSource';
 
 export interface ViewData<T> {
@@ -15,7 +15,7 @@ interface Props<T> {
   child: (data: ViewData<T>) => React.ReactElement;
 }
 
-export function StatefulWidget(props: Readonly<Props<T>>) {
+export function StatefulWidget(props: Readonly<Props<any>>) {
   const value = props.source.data;
   // 设置默认植
   const [result, setResult] = useState({
@@ -23,7 +23,7 @@ export function StatefulWidget(props: Readonly<Props<T>>) {
     has: value != null,
   });
   useEffect(() => {
-    const subscribe = props.source.subscribe(
+    const subscribe: StateSource<any> = props.source.subscribe(
       (data: any) => {
         setResult({
           data,
