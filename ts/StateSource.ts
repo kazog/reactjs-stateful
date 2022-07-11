@@ -2,7 +2,7 @@
  * Create By: Meng
  * Desc:
  */
- export class StateSource<T> {
+export class StateSource<T> {
   public data?: T;
   private _func?: (data: any) => void | undefined;
   private _error?: (data: any, error: Error) => void | undefined;
@@ -22,7 +22,7 @@
     } else {
       if (this._error) {
         // 此处返回上一次的值
-        this._error(this.data, new Error('数据更新失败！'));
+        this._error(this.data, new Error("数据更新失败！"));
       }
       return;
     }
@@ -38,7 +38,7 @@
     } else {
       if (this._error) {
         // 此处返回上一次的值
-        this._error(this.data, new Error('数据更新失败！'));
+        this._error(this.data, new Error("数据更新失败！"));
       }
       return;
     }
@@ -47,9 +47,9 @@
 
   // 赋值
   private _setData(e: any) {
-    if(typeof e == 'object') {
+    if (typeof e == "object") {
       this.data = Object.create(e);
-    }else {
+    } else {
       this.data = e;
     }
   }
@@ -57,9 +57,9 @@
   // 数据校验规则-可拓展
   private _check(e: T) {
     let data: any = this.data;
-    if(typeof e == 'object') {
+    if (typeof e == "object") {
       return !Object.is(e, data);
-    }else {
+    } else {
       return data !== e;
     }
   }
@@ -78,7 +78,7 @@
   // 订阅
   public subscribe(
     func: (data: any) => void,
-    error: (data: any, error: any) => void,
+    error: (data: any, error: any) => void
   ): StateSource<T> {
     this._func = func;
     this._error = error;

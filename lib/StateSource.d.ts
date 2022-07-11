@@ -2,7 +2,7 @@
  * Create By: Meng
  * Desc:
  */
- export class StateSource<T> {
+export class StateSource<T> {
   public data?: T; // 数据
   private _func?: (data: any) => void | undefined;
   private _error?: (data: any, error: Error) => void | undefined;
@@ -26,7 +26,10 @@
   public clone2(origin: any): void;
 
   // 订阅
-  public subscribe(func: (data: any) => void, error: (data: any, error: any) => void): StateSource<T>;
+  public subscribe(
+    func: (data: any) => void,
+    error: (data: any, error: any) => void
+  ): StateSource<T>;
 
   // 解绑
   public unsubscribe(): void;

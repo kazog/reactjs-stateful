@@ -2,8 +2,8 @@
  * Create By: Meng
  * Desc:
  */
-import React, {useState, useEffect} from 'react';
-import {StateSource} from '../lib/StateSource';
+import React, { useState, useEffect } from "react";
+import { StateSource } from "../lib/StateSource";
 
 export interface ViewData<T> {
   data: T;
@@ -31,12 +31,12 @@ export function StatefulWidget(props: Readonly<Props<any>>) {
         });
       },
       (data: any, err: Error) => {
-        console.error('StatefulWidget Error ======>', err);
+        console.error("StatefulWidget Error ======>", err);
         setResult({
           data: data,
           has: false,
         });
-      },
+      }
     );
     // 组件销毁调用
     return () => {
