@@ -5,14 +5,14 @@
 import React, { useState, useEffect } from "react";
 import { StateStore } from "./StateStore";
 
-export interface ViewData<T> {
+export interface Store<T> {
   data: T;
   has: boolean;
 }
 
 interface Props<T> {
   store: StateStore<T>;
-  child: (data: ViewData<T>) => React.ReactElement;
+  child: (data: Store<T>) => React.ReactElement;
 }
 
 export function StatefulWidget(props: Readonly<Props<any>>) {
