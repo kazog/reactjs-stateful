@@ -1,5 +1,5 @@
 /**
- * Create By: Meng
+ * Author: Meng
  * Desc:
  */
  export abstract class State {
