@@ -4,17 +4,17 @@
  * Desc:
  */
  export abstract class Store {
-  onCreate(): void;
-  onShow(): void;
-  onUpdate(): void;
-  onDestroy(): void;
-  init(): void;
+  public onCreate?(): void;
+  public onShow?(): void;
+  public onUpdate?(): void;
+  public onDestroy?(): void;
+  public init?(): void;
 
-  push(): void;
-  back(): void;
-  navigate(): void;
-  replace(): void;
-  params(): any;
-  route(): string;
-  setNavigate(navigation: any): void;
+  public push?(): void;
+  public back?(): void;
+  public navigate?(): void;
+  public replace?(): void;
+  public params?(): any;
+  public route?(): string;
+  public setNavigate?(navigation: any): void;
 }

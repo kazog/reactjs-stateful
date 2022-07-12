@@ -1,6 +1,6 @@
 {
   "name": "reactjs-store",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "基于React Hooks开发一套状态管理组件",
   "main": "index.js",
   "scripts": {},

@@ -6,4 +6,4 @@
 import { Store } from "../index";
 
 // 绑定 Store
-export function BindStore(store: Store): any;
+export function BindStore(store: any): any;

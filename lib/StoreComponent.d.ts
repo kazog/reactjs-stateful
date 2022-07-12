@@ -15,5 +15,5 @@ interface Props3 {
 // eslint-disable-next-line prettier/prettier
 export class StoreComponent<P = Props3, S = {}, SS = any> extends PureComponent<P, S, SS > {
   private _store: Store | undefined;
-  public setPageStore(_store: Store): void;
+  public setStore(_store: Store): void;
 }
