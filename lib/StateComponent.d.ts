@@ -14,4 +14,5 @@ interface Props {
 // eslint-disable-next-line prettier/prettier
 export class StateComponent<P = Props, S = {}, SS = any> extends PureComponent<P, S, SS > {
   private _state: State | undefined;
+  public setPageState(_state: State): void;
 }

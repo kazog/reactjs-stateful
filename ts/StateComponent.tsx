@@ -17,15 +17,19 @@ export class StateComponent<P = Props, S = {}, SS = any> extends PureComponent<P
 
   constructor(props: any) {
     super(props);
-    this._state = props.state;
-    if (this._state != null && this._state.onCreate) {
-      this._state.onCreate();
+    if (props.state != null) {
+      this.setPageState(props.state);
+      if (props.onCreate) {
+        props.onCreate();
+      }
     }
   }
 
-  // public getState<T>(): State | T | undefined {
-  //   return this._state;
-  // }
+  public setPageState = (state: State) => {
+    if (!this._state) {
+      this._state = state;
+    }
+  }
 
   // 可以加一个默认空视图的提示
   render() {
