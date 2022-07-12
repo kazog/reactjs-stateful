@@ -1,8 +1,9 @@
 /**
  * Author: Meng
+ * Create Date: 2022-01-09
  * Desc:
  */
-export class StateStore<T> {
+export class StoreState<T> {
   public data?: T; // 数据
   private _func?: (data: any) => void | undefined;
   private _error?: (data: any, error: Error) => void | undefined;
@@ -31,7 +32,7 @@ export class StateStore<T> {
   public subscribe(
     func: (data: any) => void,
     error: (data: any, error: any) => void
-  ): StateStore<T>;
+  ): StoreState<T>;
 
   // 解绑
   public unsubscribe(): void;
