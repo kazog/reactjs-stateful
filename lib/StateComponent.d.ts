@@ -7,8 +7,8 @@ import React, { PureComponent } from "react";
 import { State } from "./State";
 
 interface Props {
-  state: State;
-  children: () => React.ReactElement;
+  state?: State;
+  children?: () => React.ReactElement;
 }
 // PureComponent<P = {}, S = {}, SS = any> P-props; S-state; SS-
 // eslint-disable-next-line prettier/prettier

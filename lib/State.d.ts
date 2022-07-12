@@ -2,19 +2,19 @@
  * Create By: Meng
  * Desc:
  */
-export interface State {
-  onCreate?(): void;
-  onShow?(): void;
-  onUpdate?(): void;
-  onDestroy?(): void;
-  init?(): void;
+ export abstract class State {
+  onCreate(): void;
+  onShow(): void;
+  onUpdate(): void;
+  onDestroy(): void;
+  init(): void;
 
-  push?(): void;
-  back?(): void;
-  navigate?(): void;
-  replace?(): void;
-  params?(): any;
-  route?(): string;
-  setNavigation?(): void;
-  setNavigate?(): void;
+  push(): void;
+  back(): void;
+  navigate(): void;
+  replace(): void;
+  params(): any;
+  route(): string;
+  setNavigation(navigation: any): void{};
+  setNavigate(navigation: any): void {};
 }
